@@ -18,6 +18,17 @@ from ._utils import _make_divisible, _ovewrite_named_param, handle_legacy_interf
 
 __all__ = [
     "EfficientNet",
+    "EfficientNet_B0_Weights",
+    "EfficientNet_B1_Weights",
+    "EfficientNet_B2_Weights",
+    "EfficientNet_B3_Weights",
+    "EfficientNet_B4_Weights",
+    "EfficientNet_B5_Weights",
+    "EfficientNet_B6_Weights",
+    "EfficientNet_B7_Weights",
+    "EfficientNet_V2_S_Weights",
+    "EfficientNet_V2_M_Weights",
+    "EfficientNet_V2_L_Weights",
     "efficientnet_b0",
     "efficientnet_b1",
     "efficientnet_b2",
@@ -423,6 +434,264 @@ _COMMON_META_V2 = {
     "min_size": (33, 33),
     "recipe": "https://github.com/pytorch/vision/tree/main/references/classification#efficientnet-v2",
 }
+
+
+class EfficientNet_B0_Weights(WeightsEnum):
+    IMAGENET1K_V1 = Weights(
+        # Weights ported from https://github.com/rwightman/pytorch-image-models/
+        url="https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth",
+        meta={
+            **_COMMON_META_V1,
+            "num_params": 5288548,
+            "_metrics": {
+                "ImageNet-1K": {
+                    "acc@1": 77.692,
+                    "acc@5": 93.532,
+                }
+            },
+            "_ops": 0.386,
+            "_file_size": 20.451,
+            "_docs": """These weights are ported from the original paper.""",
+        },
+    )
+    DEFAULT = IMAGENET1K_V1
+
+
+class EfficientNet_B1_Weights(WeightsEnum):
+    IMAGENET1K_V1 = Weights(
+        # Weights ported from https://github.com/rwightman/pytorch-image-models/
+        url="https://download.pytorch.org/models/efficientnet_b1_rwightman-bac287d4.pth",
+        meta={
+            **_COMMON_META_V1,
+            "num_params": 7794184,
+            "_metrics": {
+                "ImageNet-1K": {
+                    "acc@1": 78.642,
+                    "acc@5": 94.186,
+                }
+            },
+            "_ops": 0.687,
+            "_file_size": 30.134,
+            "_docs": """These weights are ported from the original paper.""",
+        },
+    )
+    IMAGENET1K_V2 = Weights(
+        url="https://download.pytorch.org/models/efficientnet_b1-c27df63c.pth",
+        meta={
+            **_COMMON_META_V1,
+            "num_params": 7794184,
+            "recipe": "https://github.com/pytorch/vision/issues/3995#new-recipe-with-lr-wd-crop-tuning",
+            "_metrics": {
+                "ImageNet-1K": {
+                    "acc@1": 79.838,
+                    "acc@5": 94.934,
+                }
+            },
+            "_ops": 0.687,
+            "_file_size": 30.136,
+            "_docs": """
+                These weights improve upon the results of the original paper by using a modified version of TorchVision's
+                `new training recipe
+                <https://pytorch.org/blog/how-to-train-state-of-the-art-models-using-torchvision-latest-primitives/>`_.
+            """,
+        },
+    )
+    DEFAULT = IMAGENET1K_V2
+
+
+class EfficientNet_B2_Weights(WeightsEnum):
+    IMAGENET1K_V1 = Weights(
+        # Weights ported from https://github.com/rwightman/pytorch-image-models/
+        url="https://download.pytorch.org/models/efficientnet_b2_rwightman-c35c1473.pth",
+        meta={
+            **_COMMON_META_V1,
+            "num_params": 9109994,
+            "_metrics": {
+                "ImageNet-1K": {
+                    "acc@1": 80.608,
+                    "acc@5": 95.310,
+                }
+            },
+            "_ops": 1.088,
+            "_file_size": 35.174,
+            "_docs": """These weights are ported from the original paper.""",
+        },
+    )
+    DEFAULT = IMAGENET1K_V1
+
+
+class EfficientNet_B3_Weights(WeightsEnum):
+    IMAGENET1K_V1 = Weights(
+        # Weights ported from https://github.com/rwightman/pytorch-image-models/
+        url="https://download.pytorch.org/models/efficientnet_b3_rwightman-b3899882.pth",
+        meta={
+            **_COMMON_META_V1,
+            "num_params": 12233232,
+            "_metrics": {
+                "ImageNet-1K": {
+                    "acc@1": 82.008,
+                    "acc@5": 96.054,
+                }
+            },
+            "_ops": 1.827,
+            "_file_size": 47.184,
+            "_docs": """These weights are ported from the original paper.""",
+        },
+    )
+    DEFAULT = IMAGENET1K_V1
+
+
+class EfficientNet_B4_Weights(WeightsEnum):
+    IMAGENET1K_V1 = Weights(
+        # Weights ported from https://github.com/rwightman/pytorch-image-models/
+        url="https://download.pytorch.org/models/efficientnet_b4_rwightman-23ab8bcd.pth",
+        meta={
+            **_COMMON_META_V1,
+            "num_params": 19341616,
+            "_metrics": {
+                "ImageNet-1K": {
+                    "acc@1": 83.384,
+                    "acc@5": 96.594,
+                }
+            },
+            "_ops": 4.394,
+            "_file_size": 74.489,
+            "_docs": """These weights are ported from the original paper.""",
+        },
+    )
+    DEFAULT = IMAGENET1K_V1
+
+
+class EfficientNet_B5_Weights(WeightsEnum):
+    IMAGENET1K_V1 = Weights(
+        # Weights ported from https://github.com/lukemelas/EfficientNet-PyTorch/
+        url="https://download.pytorch.org/models/efficientnet_b5_lukemelas-1a07897c.pth",
+        meta={
+            **_COMMON_META_V1,
+            "num_params": 30389784,
+            "_metrics": {
+                "ImageNet-1K": {
+                    "acc@1": 83.444,
+                    "acc@5": 96.628,
+                }
+            },
+            "_ops": 10.266,
+            "_file_size": 116.864,
+            "_docs": """These weights are ported from the original paper.""",
+        },
+    )
+    DEFAULT = IMAGENET1K_V1
+
+
+class EfficientNet_B6_Weights(WeightsEnum):
+    IMAGENET1K_V1 = Weights(
+        # Weights ported from https://github.com/lukemelas/EfficientNet-PyTorch/
+        url="https://download.pytorch.org/models/efficientnet_b6_lukemelas-24a108a5.pth",
+        meta={
+            **_COMMON_META_V1,
+            "num_params": 43040704,
+            "_metrics": {
+                "ImageNet-1K": {
+                    "acc@1": 84.008,
+                    "acc@5": 96.916,
+                }
+            },
+            "_ops": 19.068,
+            "_file_size": 165.362,
+            "_docs": """These weights are ported from the original paper.""",
+        },
+    )
+    DEFAULT = IMAGENET1K_V1
+
+
+class EfficientNet_B7_Weights(WeightsEnum):
+    IMAGENET1K_V1 = Weights(
+        # Weights ported from https://github.com/lukemelas/EfficientNet-PyTorch/
+        url="https://download.pytorch.org/models/efficientnet_b7_lukemelas-c5b4e57e.pth",
+        meta={
+            **_COMMON_META_V1,
+            "num_params": 66347960,
+            "_metrics": {
+                "ImageNet-1K": {
+                    "acc@1": 84.122,
+                    "acc@5": 96.908,
+                }
+            },
+            "_ops": 37.746,
+            "_file_size": 254.675,
+            "_docs": """These weights are ported from the original paper.""",
+        },
+    )
+    DEFAULT = IMAGENET1K_V1
+
+
+class EfficientNet_V2_S_Weights(WeightsEnum):
+    IMAGENET1K_V1 = Weights(
+        url="https://download.pytorch.org/models/efficientnet_v2_s-dd5fe13b.pth",
+        meta={
+            **_COMMON_META_V2,
+            "num_params": 21458488,
+            "_metrics": {
+                "ImageNet-1K": {
+                    "acc@1": 84.228,
+                    "acc@5": 96.878,
+                }
+            },
+            "_ops": 8.366,
+            "_file_size": 82.704,
+            "_docs": """
+                These weights improve upon the results of the original paper by using a modified version of TorchVision's
+                `new training recipe
+                <https://pytorch.org/blog/how-to-train-state-of-the-art-models-using-torchvision-latest-primitives/>`_.
+            """,
+        },
+    )
+    DEFAULT = IMAGENET1K_V1
+
+
+class EfficientNet_V2_M_Weights(WeightsEnum):
+    IMAGENET1K_V1 = Weights(
+        url="https://download.pytorch.org/models/efficientnet_v2_m-dc08266a.pth",
+        meta={
+            **_COMMON_META_V2,
+            "num_params": 54139356,
+            "_metrics": {
+                "ImageNet-1K": {
+                    "acc@1": 85.112,
+                    "acc@5": 97.156,
+                }
+            },
+            "_ops": 24.582,
+            "_file_size": 208.01,
+            "_docs": """
+                These weights improve upon the results of the original paper by using a modified version of TorchVision's
+                `new training recipe
+                <https://pytorch.org/blog/how-to-train-state-of-the-art-models-using-torchvision-latest-primitives/>`_.
+            """,
+        },
+    )
+    DEFAULT = IMAGENET1K_V1
+
+
+class EfficientNet_V2_L_Weights(WeightsEnum):
+    # Weights ported from https://github.com/google/automl/tree/master/efficientnetv2
+    IMAGENET1K_V1 = Weights(
+        url="https://download.pytorch.org/models/efficientnet_v2_l-59c71312.pth",
+        meta={
+            **_COMMON_META_V2,
+            "num_params": 118515272,
+            "_metrics": {
+                "ImageNet-1K": {
+                    "acc@1": 85.808,
+                    "acc@5": 97.788,
+                }
+            },
+            "_ops": 56.08,
+            "_file_size": 454.573,
+            "_docs": """These weights are ported from the original paper.""",
+        },
+    )
+    DEFAULT = IMAGENET1K_V1
 
 
 @register_model()

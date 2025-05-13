@@ -133,7 +133,7 @@ def kwonly_to_pos_or_kw(fn: Callable[..., D]) -> Callable[..., D]:
         if keyword_only_args:
             keyword_only_kwargs = dict(zip(keyword_only_params, keyword_only_args))
             warnings.warn(
-                f#"Using {sequence_to_str(tuple(keyword_only_kwargs.keys()), separate_last='and ')} as positional "
+                #f"Using {sequence_to_str(tuple(keyword_only_kwargs.keys()), separate_last='and ')} as positional "
                 f"parameter(s) is deprecated since 0.13 and will be removed in 0.15. Please use keyword parameter(s) "
                 f"instead."
             )

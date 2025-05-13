@@ -36,7 +36,6 @@ class Weights:
     """
 
     url: str
-    transforms: Callable
     meta: Dict[str, Any]
 
     def __eq__(self, other: Any) -> bool:
@@ -56,14 +55,7 @@ class Weights:
         if self.meta != other.meta:
             return False
 
-        if isinstance(self.transforms, partial) and isinstance(other.transforms, partial):
-            return (
-                self.transforms.func == other.transforms.func
-                and self.transforms.args == other.transforms.args
-                and self.transforms.keywords == other.transforms.keywords
-            )
-        else:
-            return self.transforms == other.transforms
+        pass
 
 
 class WeightsEnum(Enum):

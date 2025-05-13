@@ -4,7 +4,7 @@ from typing import Callable, List, Optional
 import torch
 from torch import Tensor
 
-from ..utils import _log_api_usage_once
+#from ..utils import _log_api_usage_once
 
 
 interpolate = torch.nn.functional.interpolate
@@ -25,7 +25,7 @@ class FrozenBatchNorm2d(torch.nn.Module):
         eps: float = 1e-5,
     ):
         super().__init__()
-        _log_api_usage_once(self)
+        #_log_api_usage_once(self)
         self.eps = eps
         self.register_buffer("weight", torch.ones(num_features))
         self.register_buffer("bias", torch.zeros(num_features))
@@ -107,7 +107,7 @@ class ConvNormActivation(torch.nn.Sequential):
             params = {} if inplace is None else {"inplace": inplace}
             layers.append(activation_layer(**params))
         super().__init__(*layers)
-        _log_api_usage_once(self)
+        #_log_api_usage_once(self)
         self.out_channels = out_channels
 
         if self.__class__ == ConvNormActivation:
@@ -235,7 +235,7 @@ class SqueezeExcitation(torch.nn.Module):
         scale_activation: Callable[..., torch.nn.Module] = torch.nn.Sigmoid,
     ) -> None:
         super().__init__()
-        _log_api_usage_once(self)
+        #_log_api_usage_once(self)
         self.avgpool = torch.nn.AdaptiveAvgPool2d(1)
         self.fc1 = torch.nn.Conv2d(input_channels, squeeze_channels, 1)
         self.fc2 = torch.nn.Conv2d(squeeze_channels, input_channels, 1)
@@ -295,7 +295,7 @@ class MLP(torch.nn.Sequential):
         layers.append(torch.nn.Dropout(dropout, **params))
 
         super().__init__(*layers)
-        _log_api_usage_once(self)
+        #_log_api_usage_once(self)
 
 
 class Permute(torch.nn.Module):

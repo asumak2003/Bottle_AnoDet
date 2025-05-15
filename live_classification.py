@@ -7,6 +7,8 @@ import torch
 import torch.nn as nn
 from torchvision import transforms
 from my_models import efficientnet_v2_s
+from torchvision import transforms
+from my_models import efficientnet_v2_s
 import time
 import numpy as np
 
@@ -22,7 +24,8 @@ cam_IP = "rtsp://192.168.60.101:8554/"
 model = efficientnet_v2_s(weights=None)
 num_classes = 4
 model.classifier[1] = nn.Linear(model.classifier[1].in_features, num_classes)
-model.load_state_dict(torch.load("models/model8_640_368_ER_AUG/model8.pth", map_location="cpu"))
+model.load_state_dict(torch.load("models/model8_640_368_ER_AUG/model8.pth", map_location="cpu"), strict=True)
+print("Model loaded successfully")
 model.eval()
 print("Model loaded successfully")
 

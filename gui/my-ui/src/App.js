@@ -11,7 +11,7 @@ function App() {
   const lastLoopTimeRef = useRef(0);
   const triggeredRef = useRef({ first: false, second: false });
   const isDemo = false;
-  const presentation = false;
+  const presentation = true;
   const logEndRef = useRef(null);
 
 

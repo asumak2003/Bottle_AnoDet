@@ -26,6 +26,7 @@ num_classes = 4
 model.classifier[1] = nn.Linear(model.classifier[1].in_features, num_classes)
 model.load_state_dict(torch.load("models/model8_640_368_ER_AUG/model8.pth", map_location="cpu"), strict=True)
 print("Model loaded successfully")
+model.load_state_dict(torch.load("models/model8_640_368_ER_AUG/model8.pth"))
 model.eval()
 print("Model loaded successfully")
 

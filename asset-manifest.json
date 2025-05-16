@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/asumak2003/Bottle_AnoDet/gui/my-ui/static/css/main.51ac84d0.css",
+    "main.js": "/asumak2003/Bottle_AnoDet/gui/my-ui/static/js/main.20052b8e.js",
+    "static/js/453.e71dc229.chunk.js": "/asumak2003/Bottle_AnoDet/gui/my-ui/static/js/453.e71dc229.chunk.js",
+    "index.html": "/asumak2003/Bottle_AnoDet/gui/my-ui/index.html",
+    "main.51ac84d0.css.map": "/asumak2003/Bottle_AnoDet/gui/my-ui/static/css/main.51ac84d0.css.map",
+    "main.20052b8e.js.map": "/asumak2003/Bottle_AnoDet/gui/my-ui/static/js/main.20052b8e.js.map",
+    "453.e71dc229.chunk.js.map": "/asumak2003/Bottle_AnoDet/gui/my-ui/static/js/453.e71dc229.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51ac84d0.css",
+    "static/js/main.20052b8e.js"
+  ]
+}

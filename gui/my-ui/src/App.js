@@ -144,7 +144,7 @@ function App() {
       <div className="header">
         <div className="clock">{time}</div>
         <h1 className="title">Real-Time Anomaly Detection</h1>
-        <img src="/images/Logo_HHN.png" alt="Logo" className="small-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/Logo_HHN.png`} alt="Logo" className="small-image" />
       </div>
 
       <div className="main-content">
